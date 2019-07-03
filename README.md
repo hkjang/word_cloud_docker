@@ -1,4 +1,4 @@
-#Usage:
+# Usage:
 
 Run wordcloud_cli using ./wordcloud as the working directory like this:
 
