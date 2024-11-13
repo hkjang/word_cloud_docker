@@ -9,7 +9,7 @@ router.post('/', async function(req, res, next) {
   fs.writeFileSync('wordcloud/mytext.txt', req.body.text);
 
   const filename = uniqid();
-  const { stdout, stderr } = await exec(`wordcloud_cli --text wordcloud/mytext.txt --imagefile public/files/${filename}.png --fontfile "wordcloud/WhitneyMedium.ttf" --height 768 --width 1024 --background "#222222"`);
+  const { stdout, stderr } = await exec(`wordcloud_cli --text wordcloud/mytext.txt --imagefile public/files/${filename}.png --fontfile "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc" --height 768 --width 1024 --background "#222222"`);
   console.log('stdout:', stdout);
   console.log('stderr:', stderr);
 
